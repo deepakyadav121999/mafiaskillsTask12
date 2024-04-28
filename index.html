@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+   let number = 153;
+   let factors = [];
+    for(let i=0; i<=number; i++){
+        if(number%i==0){
+         factors.push(i)
+        }
+    }
+    let sum1 =0;
+  let sumfun = ()=>{ number.toString().split('').forEach(item=>{
+    sum1 += parseInt(item)
+  })
+}
+sumfun()
+
+let temp = number;
+let sum =0;
+while (temp > 0) {
+    let remainder = temp % 10;
+    sum += remainder * remainder * remainder;
+    temp = parseInt(temp / 10);
+}
+ console.log(`Ex - Number :- ${number}`)
+ console.log(`Sum of its digits: ${sum1}`)
+if (sum == number) {
+    console.log(`Is it an Armstrong number?  Yes
+`);
+}
+else {
+    console.log(`Is it an Armstrong number?  No
+`);
+}
+     
+let isPrime = true;
+ for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        console.log(`Is it a prime number? Yes`);
+    } else {
+        console.log(`Is it a prime number? No`);
+    }
+
+
+    console.log(`Factors: ${factors}`)
+
+    </script>
+</body>
+</html>
